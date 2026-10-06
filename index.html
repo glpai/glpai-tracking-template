@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Make a free copy of a GLP-1 tracking Google Sheet for medication, food and symptoms, weight, BMI, and goal progress. Preview the dashboard first.">
+  <title>Free GLP-1 Tracking Spreadsheet | GLP AI</title>
+  <link rel="canonical" href="https://glpai.github.io/glpai-tracking-template/">
+  <style>
+    :root { --ink:#30242d; --muted:#6c6170; --pink:#d12b79; --pale:#fff0f6; --line:#ead9e1; --paper:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:#fff9fb; color:var(--ink); font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:#a8175b; }
+    a:focus-visible, button:focus-visible { outline:3px solid var(--pink); outline-offset:3px; }
+    .wrap { width:min(1100px,calc(100% - 40px)); margin:auto; }
+    header { border-bottom:1px solid var(--line); background:var(--paper); }
+    .nav { min-height:70px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:inline-flex; align-items:center; text-decoration:none; color:var(--ink); }
+    .brand img { display:block; width:122px; height:auto; }
+    .nav nav { display:flex; gap:22px; font-size:14px; font-weight:650; }
+    .nav nav a { color:var(--ink); text-decoration:none; }
+    .hero { padding:78px 0 44px; max-width:810px; }
+    .eyebrow { color:var(--pink); font-size:13px; text-transform:uppercase; letter-spacing:.12em; font-weight:800; }
+    h1 { font-size:clamp(36px,5vw,62px); line-height:1.08; letter-spacing:-.055em; margin:12px 0 20px; }
+    h2 { font-size:clamp(25px,3vw,36px); letter-spacing:-.035em; line-height:1.18; margin:0 0 12px; }
+    h3 { font-size:18px; margin:0 0 6px; }
+    p { margin:0 0 18px; }
+    .lead { font-size:19px; color:#554a54; max-width:720px; }
+    .actions { display:flex; flex-wrap:wrap; align-items:center; gap:13px; margin-top:28px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:11px 19px; border-radius:10px; background:var(--pink); color:#fff; font-weight:750; text-decoration:none; border:1px solid var(--pink); }
+    .button:hover { background:#b42167; }
+    .button.secondary { background:#fff; color:var(--ink); border-color:var(--line); }
+    .button.secondary:hover { background:var(--pale); }
+    .small { font-size:14px; color:var(--muted); }
+    .preview { background:var(--paper); padding:15px; border:1px solid var(--line); border-radius:18px; box-shadow:0 20px 55px rgba(72,31,53,.08); margin:12px 0 70px; }
+    .preview img { display:block; width:100%; height:auto; border-radius:8px; }
+    .preview figcaption { padding:13px 5px 3px; font-size:13px; color:var(--muted); }
+    section { padding:0 0 70px; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:24px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:25px; }
+    .card p { color:var(--muted); margin:0; }
+    .steps { margin:18px 0 0; padding-left:24px; }
+    .steps li { padding:0 0 12px 6px; }
+    .app { border-radius:18px; background:#fbe5ef; padding:34px; display:flex; justify-content:space-between; gap:30px; align-items:center; }
+    .app p { max-width:670px; margin:0; }
+    footer { border-top:1px solid var(--line); padding:26px 0 36px; color:var(--muted); font-size:13px; }
+    @media(max-width:720px) { .nav nav { gap:12px; } .hero { padding-top:48px; } .grid { grid-template-columns:1fr; } .app { display:block; } .app .button { margin-top:20px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="GLP AI tracking template home"><img src="assets/glp-ai-logo.svg" alt="GLP AI" width="122" height="25"></a>
+      <nav aria-label="Main navigation"><a href="#preview">Preview</a><a href="#included">What’s included</a><a href="#how-to-use">How to use</a></nav>
+    </div>
+  </header>
+  <main id="top" class="wrap">
+    <div class="hero">
+      <div class="eyebrow">Free tracking template</div>
+      <h1>Keep your GLP-1 journey in one clear spreadsheet.</h1>
+      <p class="lead">Record doses, daily food and symptom notes, weight, BMI, and progress toward a goal you set. Make your own blank Google Sheet or download the Excel file.</p>
+      <div class="actions">
+        <a class="button" href="https://docs.google.com/spreadsheets/d/10cayH7ytX4a8bbMCIOgEJa3ncLnZTnhqs1YPEseBW2k/copy">Make a copy in Google Sheets</a>
+        <a class="button secondary" href="assets/GLP-AI-tracking-template.xlsx" download>Download Excel template</a>
+      </div>
+      <p class="small">A Google account is needed to make a Sheets copy. The Excel download needs no sign-in and also opens in Apple Numbers.</p>
+    </div>
+
+    <figure class="preview" id="preview">
+      <img src="assets/dashboard-demo.png" width="2362" height="933" alt="Example GLP-1 spreadsheet dashboard showing starting and latest weight, goal progress, BMI, a goal ring, and a weight trend chart" loading="eager">
+      <figcaption>Illustrative dashboard using fictional entries. <a href="https://docs.google.com/spreadsheets/d/1BJxqUHHvNQVazXcs5ao7fITwfq9053mdmlJOezsdIqw/edit">Explore the live demo Sheet</a>; your copy starts with empty logs.</figcaption>
+    </figure>
+
+    <section id="included">
+      <h2>What’s inside</h2>
+      <div class="grid">
+        <div class="card"><h3>Dashboard</h3><p>See starting and latest weight, progress toward your own goal, BMI, dose count, daily check-ins, and charts together.</p></div>
+        <div class="card"><h3>Dose log</h3><p>Record medication, the amount and unit you actually took, the route, injection site when relevant, and notes.</p></div>
+        <div class="card"><h3>Daily check-in</h3><p>Optionally note protein, fiber, water, appetite and food observations, and symptoms. Leave any field blank.</p></div>
+        <div class="card"><h3>Weight progress</h3><p>Enter your height, preferred units, and personal goal. Add weights over time to update the dashboard and BMI figures.</p></div>
+      </div>
+    </section>
+
+    <section id="how-to-use">
+      <h2>How to use it</h2>
+      <ol class="steps">
+        <li><a href="https://docs.google.com/spreadsheets/d/10cayH7ytX4a8bbMCIOgEJa3ncLnZTnhqs1YPEseBW2k/copy">Make your own blank Google Sheet</a>, or <a href="assets/GLP-AI-tracking-template.xlsx" download>download the Excel version</a>.</li>
+        <li>Set your height, units, and personal goal on the Weight Progress tab.</li>
+        <li>Enter weights in consecutive rows, then log doses and daily details when useful to you. Your dashboard will update from those entries.</li>
+      </ol>
+      <p class="small">BMI is a screening measure, not a diagnosis. The template records what you enter; it does not calculate a medication dose or replace guidance from your clinician. The spreadsheet does not sync with GLP AI.</p>
+    </section>
+
+    <section class="app" aria-labelledby="app-title">
+      <div>
+        <h2 id="app-title">Prefer tracking on your phone?</h2>
+        <p><a href="https://glpai.app/">GLP AI</a> lets you log doses, symptoms, weight, and meals in an app. It also offers reminders, a limited try of Meal Score and the AI coach, with full access in Premium.</p>
+      </div>
+      <a class="button" href="https://glpai.app/">Explore GLP AI</a>
+    </section>
+  </main>
+  <footer><div class="wrap">GLP AI tracking template · A free resource for personal record-keeping</div></footer>
+</body>
+</html>
